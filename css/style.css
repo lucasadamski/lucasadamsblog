@@ -66,3 +66,22 @@ article p {
 }
 
 
+
+nav ul li a:link, nav ul li a:visited, nav ul li a:active {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(106, 106, 226);
+}
+
+h1 a:link, h1 a:visited, h1 a:active {
+    text-decoration: none;
+    color: black;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 255);
+}
