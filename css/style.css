@@ -59,7 +59,8 @@ nav ul li a {
 
 article p {
     text-align: justify;
-    font-size: max(1.5vw, 22px);
+    font-size: max(1.4vw, 18px);
+    line-height: 2.5vw;
     
     margin-left: 10%;
     margin-right: 10%;
@@ -85,3 +86,26 @@ h1 a:hover {
     text-decoration: none;
     color: rgb(0, 0, 255);
 }
+
+#navigation-menu {
+    position: sticky;
+    top: 0;
+}
+
+.tiles-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tile {
+    position: relative;
+    border: 2x black solid;
+    font-size:2rem;
+}
+
+.tile-title {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
