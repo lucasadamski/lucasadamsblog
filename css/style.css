@@ -95,6 +95,8 @@ h1 a:hover {
 .tiles-container {
     display: flex;
     justify-content: space-around;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
 }
 
 .tile {
