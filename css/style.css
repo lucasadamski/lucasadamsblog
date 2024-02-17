@@ -14,7 +14,7 @@ h3 {
 }
 
 header {
-    min-width: 400px;
+    min-width: 500px;
 }
 
 header h1 {
@@ -28,39 +28,48 @@ header h1 {
     margin-bottom: 1vw;
 }
 
-nav ul { 
-    display: inline;
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    
+    padding-inline-start: 0%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.menu-text {
+    position: relative;
+    left: 0;
+    
 }
 
 nav ul li {
     background-color: black;
-    float: left;
+    
     text-align: center;
+    vertical-align: center;
     width: 30%;
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 3vw;
     border-radius: 25px;
-    height: 3vw;
+   
+    
+   
 }
 
 nav ul li a {
     color: white;
-    font-size: 2vw;
     font-weight: 500;
     font-variant-caps: all-small-caps;
-    vertical-align: center;
+   
 }
 
 article p {
     text-align: justify;
     font-size: max(1.4vw, 18px);
-    line-height: 2.5vw;
+    
     
     margin-left: 10%;
     margin-right: 10%;
@@ -119,6 +128,60 @@ h1 a:hover {
     color: black;
 }
 
-img {
-    border-radius: 100px;
+.tile-image {
+    border-radius: 90px;
+}
+
+.photos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-horizontal, .photo-vertical {
+    max-width: 100%;
+    height: auto;
+    border: 20px solid #000000;
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    nav ul li a {        
+        font-weight: 500;
+        font-size: 15px;        
+    }
+    nav ul li  {        
+        width: 50%;       
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;       
+        align-items: center;
+        padding-inline-start: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .tile-image {
+        width: 300px;
+        border-radius: 60px;
+    }
+
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    nav ul li a {        
+        font-weight: 500;
+        font-size: 20px;       
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 10000px) {
+    nav ul li a {
+        font-weight: 500;
+        font-size: 30px;        
+    }
 }
