@@ -13,6 +13,12 @@ h3 {
     font-variant-caps: small-caps;
 }
 
+h4 {
+    text-align: center;
+    font-size: max(1.5vw, 20px);
+    margin-top: 2rem;
+}
+
 header {
     min-width: 500px;
 }
@@ -66,13 +72,17 @@ nav ul li a {
    
 }
 
-article p {
+article p, article ol li {
     text-align: justify;
     font-size: max(1.4vw, 18px);
-    
-    
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.download-link {
+    text-align: center;
+    font-size: max(1.4vw, 18px);
+   
 }
 
 
