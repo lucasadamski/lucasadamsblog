@@ -151,8 +151,9 @@ h1 a:hover {
 }
 
 .photo-horizontal, .photo-vertical {
-    max-width: 100%;
+    max-width: 800px;
     height: auto;
+    max-height: 800px;
     border: 20px solid #000000;
     border-radius: 4px;
 }
