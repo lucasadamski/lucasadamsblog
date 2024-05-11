@@ -1,33 +1,63 @@
-body {
-    font-family: 'Bookman Old Style';
-    min-width: 400px;
-    max-width: 1500px;
-    margin: auto;
-    height: 1rem;
+
+@font-face {
+    font-family: 'ITC Cheltenham Std Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ITC Cheltenham Std Bold Italic'), url('../fonts/CheltenhamStdBoldItalic.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'ITC Cheltenham Std Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ITC Cheltenham Std Book'), url('../fonts/CheltenhamStdBook.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'ITC Cheltenham Std Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ITC Cheltenham Std Light'), url('../fonts/CheltenhamStdLight.woff') format('woff');
+    }
+
+html {
+    font-size: 18px;
+    font-family: 'ITC Cheltenham Std Light';
 }
 
+main {
+    margin: 0 auto;
+}
+
+
 h2 {
+    font-family: 'ITC Cheltenham Std Book';
     text-align: center;
-    font-size: max(2.5vw, 20px);
-    margin-top: 0px;
-    font-variant-caps: small-caps;
+    margin-bottom: 0%;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-family: 'ITC Cheltenham Std Light';
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 0;
 }
 
 h4 {
     text-align: center;
-    font-size: max(1.5vw, 20px);
     margin-top: 2rem;
 }
 
 header {
-    min-width: 500px;
+    min-width: 200px;
 }
 
 header h1 {
-    font-family: 'Perpetua';
+    font-family: 'ITC Cheltenham Std ';
     font-variant-caps: small-caps;
     font-weight: 500;
-    font-size: 8vw;    
     text-align: center;
     margin: 0px;
     margin-top: 4vw;
@@ -42,6 +72,7 @@ nav ul {
     padding-inline-start: 0%;
     padding-left: 15%;
     padding-right: 15%;
+
 }
 
 .menu-text {
@@ -52,7 +83,6 @@ nav ul {
 
 nav ul li {
     background-color: black;
-    
     text-align: center;
     vertical-align: center;
     width: 30%;
@@ -60,9 +90,6 @@ nav ul li {
     margin-right: 1rem;
     margin-bottom: 3vw;
     border-radius: 25px;
-   
-    
-   
 }
 
 nav ul li a {
@@ -74,9 +101,7 @@ nav ul li a {
 
 article p, article ol li {
     text-align: justify;
-    font-size: max(1.4vw, 18px);
-    margin-left: 10%;
-    margin-right: 10%;
+   
 }
 
 .download-link {
@@ -107,7 +132,7 @@ h1 a:hover {
 }
 
 #navigation-menu {
-    position: sticky;
+    padding-top: 10px;
     top: 0;
 }
 
@@ -116,6 +141,7 @@ h1 a:hover {
     justify-content: space-around;
     flex: 0 1 auto;
     flex-wrap: wrap;
+    z-index: -1;
 }
 
 .tile {
@@ -154,17 +180,31 @@ h1 a:hover {
     max-width: 800px;
     height: auto;
     max-height: 800px;
-    border: 20px solid #000000;
-    border-radius: 4px;
+    margin-top: 20px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 767px) {
+@media screen and (min-width: 10px) and (max-width: 767px) {
     nav ul li a {        
         font-weight: 500;
-        font-size: 15px;        
+        font-size: 20px;        
     }
+
+    h3 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    h6 {
+        font-size: 20px;
+    }
+    
+    
+    
+    
     nav ul li  {        
-        width: 50%;       
+        width: 50%;     
+        border-radius: none;  
+        
     }
 
     nav ul {
@@ -178,23 +218,110 @@ h1 a:hover {
     }
 
     .tile-image {
-        width: 300px;
+        max-width: 250px;
         border-radius: 60px;
+        margin: 5px 0;
+    }
+
+    .photo-horizontal, .photo-vertical {
+        width: 100vw;
     }
 
     
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    nav ul li a {        
+    header h1 a {
+        font-size: 4rem;
+    }
+    nav ul li a {
         font-weight: 500;
-        font-size: 20px;       
+        font-size: 20px;        
+    }
+    p, h1, h2, h3 {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    h2 {
+        font-size: 3.00rem;
+        line-height: 3.0625rem;
+    }
+    h3, h4 {
+        font-size: 1.80rem;
+        line-height: 2.10rem;
+        margin-top: 1rem;
+    }
+    p, li {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+    li {
+        margin: 0 15%;
+    }
+    html {
+        width: calc(auto);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 100px;
+    }
+    .tile-image {
+        width: 300px;
+    }
+    .tiles-container {
+        margin: 60px 1%;
+        
+    }
+
+    .photo-horizontal, .photo-vertical {
+        width: 100vw;
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 10000px) {
+@media screen and (min-width: 992px) {
     nav ul li a {
         font-weight: 500;
         font-size: 30px;        
     }
+    p, h1, h2, h3 {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    h2 {
+        font-size: 3.00rem;
+        line-height: 3.0625rem;
+    }
+    h3, h4 {
+        font-size: 1.80rem;
+        line-height: 2.10rem;
+        margin-top: 1rem;
+        max-width: 550px;
+        text-align: center;
+        margin-left:  auto;
+        margin-right: auto;
+    }
+    p, li {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+    li {
+        margin: 0 15%;
+    }
+    html {
+        width: calc(auto);
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 100px;
+    }
+    .tile-image {
+        width: 300px;
+    }
+    .tiles-container {
+        margin: 60px 1%;
+        
+    }
+
 }
