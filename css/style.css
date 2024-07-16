@@ -169,6 +169,12 @@ h1 a:hover {
     border-color: #000000;
 }
 
+.tile:hover .tile-title {
+    background: blue;
+    color: white;
+    border-style: dashed;
+}
+
 .photos-container {
     display: flex;
     flex-direction: column;
